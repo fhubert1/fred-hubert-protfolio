@@ -1,0 +1,187 @@
+/* Global Selectors */
+* {
+    
+    font-family: Arial, Helvetica, sans-serif;
+       
+    /* box-sizing: border-box; */
+    /* background-color: blueviolet; */
+    /* color: black; */
+}
+
+/* Element selectors */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: #3498db;
+    color: #fff;
+   
+}
+
+
+header h1 {
+    display: inline-block;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+main {
+    /* flex: 1; */
+    display: flex;
+}
+
+
+/* Class Selectors */
+/* my headshot selector */
+.headshot {
+    display: inline-block;
+    /* position: relative; */
+    top: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+
+.left-column {
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.top-section {
+    flex: 1;
+    background-color: #2ecc71;
+    margin: 5px;
+
+    font-size: 200%;
+}
+
+
+.middle-section {
+    flex: 2;
+    background-color: #e74c3c;
+    margin: 2%;
+
+    font-size: 200%;
+}
+
+.bottom-section {
+    flex: 3;
+    background-color: #f39c12;
+    margin: 2%;
+
+    font-size: 200%;    
+
+}
+
+
+/*  Right column and sections */
+
+.right-column {
+    flex: 0 0 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-row {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.middle-row {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bottom-row {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-row-box {
+    flex: 1;
+    margin: 5px;
+    position: relative;
+}
+
+.middle-row-box {
+    flex: 2;
+    margin: 5px;
+    position: relative;
+    border: 1px solid #000;
+}
+
+.bottom-row-box {
+    flex: 3;
+    margin: 5px;
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-size: 12px;
+    color: #fff;
+    background-color: #3498db;
+    padding: 5px;
+}
+
+.bottom-row-box ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: underline;
+    align-items: center;
+
+
+}
+
+/* Cards are split into two columns at 992px or smaller */
+@media screen and (max-width: 992px) {
+    .card {
+      width: 50%;
+    }
+    /* Change the header color */
+    header {
+      background: #772014;
+    }
+}
+  
+/* Cards are stacked on top of each other at 768px or smaller */
+@media screen and (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+    /* Change the header color */
+    header {
+      background: #8ac4ff;
+    }
+}

@@ -1,18 +1,16 @@
+
 /* Global Selectors */
 * {
     
     font-family: Arial, Helvetica, sans-serif;
        
-    /* box-sizing: border-box; */
-    /* background-color: blueviolet; */
-    /* color: black; */
 }
 
 /* Element selectors */
 body {
     margin: 0;
     padding: 0;
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     height: 100vh;
 }
@@ -46,8 +44,7 @@ nav a {
 }
 
 main {
-    /* flex: 1; */
-    display: flex;
+    display: flexbox;
 }
 
 
@@ -62,59 +59,47 @@ main {
 
 }
 
-.left-column, .right-column {
-    flex-grow: inherit;
-    flex-grow: inherit;
+/* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
+.container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+
+  }
+  
+  .justify-center {
+    justify-content: center;
+
+  } 
+
+.column {
+    display: flex;
+    flex-direction: row;
 
 }
 
 /* columns */
 .left-column {
     flex: 25%;
-
+    font-size: x-large;
 }
 
 .right-column {
     flex: 75%;
-
-}
-
-/* sections within column */
-.top-section, .middle-section, .bottom-section, .top-row, .middle-row, .bottom-row {
-    flex: 1;
-    margin: 5px;
-    position: relative;
-
-}
-
-/* adjust h2 so that it is at top of the section */
-.top-section h2, .middle-section h2, .bottom-section h2 {
-    margin-top: 3%;
 }
 
 /* rows */
-.top-row, .middle-row, .bottom-row {
+.row {
     border-left: 2px gray solid;
 }
 
 /* box with each row */
-.top-row-box, .middle-row-box, .bottom-row-box {
+.box {
     margin: 5px;
     position: relative;
 
 }
 
-.top-row-box {
-    flex: 1;
-}
-
-.middle-row-box {
-    flex: 2;
-}
-
-.bottom-row-box ul {
+.box ul {
     flex: 3;
     display: flex;
     justify-content: space-around;
@@ -134,13 +119,28 @@ main {
     padding: 5px;
 }
 
-/* Cards are split into two columns at 992px or smaller */
-@media screen and (max-width: 992px) {
+/* mobile-first stack  */
+@media screen and (max-width: 768px) {
+    
+    header {
+        width: 60%;
+    }
 
+    .container {
+        flex: 0 1 33%;
+        max-width:75%;
+    }
 }
   
-/* Cards are stacked on top of each other at 768px or smaller */
-@media screen and (max-width: 768px) {
+/* larger screens */
+@media screen and (max-width: 992px) {
 
+    header {
+        width: 90%;
+    }
+
+    .container {
+        max-width:90%;
+    }
 
 }

@@ -27,7 +27,6 @@ header {
    
 }
 
-
 header h1 {
     display: inline-block;
 }
@@ -60,88 +59,69 @@ main {
     top: 10px;
     width: 50px;
     height: 50px;
+
 }
 
-
-.left-column {
-    flex: 0 0 25%;
+.left-column, .right-column {
+    flex-grow: inherit;
+    flex-grow: inherit;
     display: flex;
     flex-direction: column;
-}
-
-
-.top-section {
-    flex: 1;
-    background-color: #2ecc71;
-    margin: 5px;
-
-    font-size: 200%;
-}
-
-
-.middle-section {
-    flex: 2;
-    background-color: #e74c3c;
-    margin: 2%;
-
-    font-size: 200%;
-}
-
-.bottom-section {
-    flex: 3;
-    background-color: #f39c12;
-    margin: 2%;
-
-    font-size: 200%;    
 
 }
 
+/* columns */
+.left-column {
+    flex: 25%;
 
-/*  Right column and sections */
+}
 
 .right-column {
-    flex: 0 0 75%;
-    display: flex;
-    flex-direction: column;
+    flex: 75%;
+
 }
 
-.top-row {
+/* sections within column */
+.top-section, .middle-section, .bottom-section, .top-row, .middle-row, .bottom-row {
     flex: 1;
-    display: flex;
-    flex-direction: column;
+    margin: 5px;
+    position: relative;
 
 }
 
-.middle-row {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-
+/* adjust h2 so that it is at top of the section */
+.top-section h2, .middle-section h2, .bottom-section h2 {
+    margin-top: 3%;
 }
 
-.bottom-row {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
+/* rows */
+.top-row, .middle-row, .bottom-row {
+    border-left: 2px gray solid;
+}
+
+/* box with each row */
+.top-row-box, .middle-row-box, .bottom-row-box {
+    margin: 5px;
+    position: relative;
+
 }
 
 .top-row-box {
     flex: 1;
-    margin: 5px;
-    position: relative;
 }
 
 .middle-row-box {
     flex: 2;
-    margin: 5px;
-    position: relative;
-    border: 1px solid #000;
 }
 
-.bottom-row-box {
+.bottom-row-box ul {
     flex: 3;
-    margin: 5px;
-    position: relative;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: underline;
+    align-items: center;
+
 }
 
 .label {
@@ -154,34 +134,13 @@ main {
     padding: 5px;
 }
 
-.bottom-row-box ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    text-decoration: underline;
-    align-items: center;
-
-
-}
-
 /* Cards are split into two columns at 992px or smaller */
 @media screen and (max-width: 992px) {
-    .card {
-      width: 50%;
-    }
-    /* Change the header color */
-    header {
-      background: #772014;
-    }
+
 }
   
 /* Cards are stacked on top of each other at 768px or smaller */
 @media screen and (max-width: 768px) {
-    .card {
-      width: 100%;
-    }
-    /* Change the header color */
-    header {
-      background: #8ac4ff;
-    }
+
+
 }

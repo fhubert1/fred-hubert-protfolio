@@ -34,3 +34,11 @@ THEN I am presented with a responsive layout that adapts to my viewport
 ## Notes
 Submitted question on to Slack (AskkBCS Learning Assistance) concerning how to group columns together in a row.  Couldn't really provide that type of support so scheduled tutoring session for 3/5.
 
+Tutor session on 3/6 to discuss responsive page issues 
+
+## Screenshot
+![Screenshot home page](./images/demo.jpg)
+
+![Link to page](https://fhubert1.github.io/fred-hubert-protfolio/)
+
+![Link to GitHub Repo](https://github.com/fhubert1/horiseon-seo-optimization)

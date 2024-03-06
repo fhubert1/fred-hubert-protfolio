@@ -1,9 +1,7 @@
 
 /* Global Selectors */
 * {
-    
-    font-family: Arial, Helvetica, sans-serif;
-       
+    font-family: Arial, Helvetica, sans-serif;     
 }
 
 /* Element selectors */
@@ -22,7 +20,7 @@ header {
     padding: 1%;
     background-color: #3498db;
     color: #fff;
-   
+    flex-wrap: wrap;   
 }
 
 header h1 {
@@ -47,12 +45,21 @@ main {
     display: flexbox;
 }
 
+/* Define the styles for the link when hovered */
+.box a {
+    display: inline-block; 
+    transition: transform 0.5s ease-in-out; 
+  }
+
+.box a:hover {
+    transform: scale(1.1); /* Increase the size of the link on hover */
+  }
+
 
 /* Class Selectors */
 /* my headshot selector */
 .headshot {
     display: inline-block;
-    /* position: relative; */
     top: 10px;
     width: 50px;
     height: 50px;
@@ -63,21 +70,17 @@ main {
 .container {
     display: flex;
     flex-wrap: wrap;
-
   }
   
-  .justify-center {
+.justify-center {
     justify-content: center;
-
-  } 
+} 
 
 .column {
-    display: flex;
-    flex-direction: row;
-
+    display: flex;  
 }
 
-/* columns */
+/* define left and right columns */
 .left-column {
     flex: 25%;
     font-size: x-large;
@@ -87,9 +90,28 @@ main {
     flex: 75%;
 }
 
+/* define the work section */
+.work {
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50px;
+    padding: 10px;
+    flex: 0 0 500px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin: 20px;
+}
+
 /* rows */
 .row {
     border-left: 2px gray solid;
+}
+
+.row-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /* box with each row */
@@ -99,41 +121,61 @@ main {
 
 }
 
+/* define the un-ordered list for the box */
 .box ul {
     flex: 3;
-    display: flex;
+    display: flex; 
     justify-content: space-around;
     list-style: none;
     text-decoration: underline;
     align-items: center;
+    font-weight: bold;
 
 }
 
 .label {
+
     position: absolute;
-    bottom: 5%;
+    top: 5%;
     left: 5%;
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: bolder;
     color: #fff;
-    background-color: #3498db;
     padding: 5px;
-}
+
+    }
 
 /* mobile-first stack  */
 @media screen and (max-width: 768px) {
     
     header {
-        width: 60%;
-    }
+        width: 100%;
+        justify-content: center;    }
 
     .container {
-        flex: 0 1 33%;
-        max-width:75%;
+        flex-direction: column;
+        align-items: center;
     }
+
+    .right-column {
+        flex: 75%;
+        max-width: 88%;
+    }
+
+    /* remove left border */
+    .row {
+        border-left: 0;
+    }
+
+    .box ul {
+        display: inline-block;
+
+    }
+
 }
   
 /* larger screens */
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
 
     header {
         width: 90%;
@@ -144,3 +186,13 @@ main {
     }
 
 }
+
+
+.card-header {
+    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    outline: 2px solid white;
+    position: relative;
+    margin: -1.15rem 0 1.5rem 0;
+    border-radius: 2rem;
+    
+  }
